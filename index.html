@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZN Fit</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <header>
+    <h1>ZN Fit</h1>
+  </header>
+
+  <nav>
+    <button onclick="showScreen('exercises')">Exercícios</button>
+    <button onclick="showScreen('weight')">Peso</button>
+    <button onclick="showScreen('about')">Sobre</button>
+  </nav>
+
+  <main>
+    <section id="exercises" class="screen">
+      <h2>Exercícios</h2>
+      <div class="exercise-list">
+        <div class="exercise">
+          <img src="images/A.png" alt="Exercício A">
+          <p>Exercício A</p>
+        </div>
+        <div class="exercise">
+          <img src="images/B.png" alt="Exercício B">
+          <p>Exercício B</p>
+        </div>
+        <div class="exercise">
+          <img src="images/C.png" alt="Exercício C">
+          <p>Exercício C</p>
+        </div>
+        <div class="exercise">
+          <img src="images/D.png" alt="Exercício D">
+          <p>Exercício D</p>
+        </div>
+        <div class="exercise">
+          <img src="images/E.png" alt="Exercício E">
+          <p>Exercício E</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="weight" class="screen hidden">
+      <h2>Marcador de Peso</h2>
+      <input type="number" id="weightInput" placeholder="Digite seu peso (kg)">
+      <button onclick="saveWeight()">Salvar</button>
+      <h3>Histórico de Peso</h3>
+      <ul id="weightList"></ul>
+    </section>
+
+    <section id="about" class="screen hidden">
+      <h2>Sobre ZN Fit</h2>
+      <p>Aplicativo de exercícios e controle de peso.</p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
